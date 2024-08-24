@@ -15,7 +15,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [1] = LAYOUT(
     //-----------------------------------------------------------------------.                ,-------------------------------------------------------------.
       KC_Q        ,  KC_W       ,  KC_F        ,  KC_P        ,  KC_G        ,                KC_J      ,  KC_L      ,  KC_U      ,  KC_Y      ,  KC_SCLN   ,
-      KC_A        ,  KC_R       ,  KC_S        ,  LCTL_T(KC_T),  KC_D        ,                KC_H      ,LCTL_T(KC_N),  KC_E      ,  KC_I      ,  KC_O      ,
+      KC_A        ,  KC_R       ,  KC_S        ,  KC_T        ,  KC_D        ,                KC_H      ,  KC_N      <F8>,  KC_E      ,  KC_I      ,  KC_O      ,
       KC_X        ,  KC_SLSH    ,  KC_C        ,  KC_V        ,  KC_B        ,                KC_K      ,  KC_M      ,  KC_COMM   ,  KC_DOT    ,  KC_Q      ,
     //-----------------------------------------------------------------------|                |-------------------------------------------------------------.
       TO(5)       ,  KC_SPC     , OSM(MOD_LGUI),  KC_LSFT     ,  MO(4)       ,                MO(2)     ,  KC_SPC    ,  MO(3)     ,  MO(7)     ,  KC_NO
@@ -28,7 +28,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KC_GRV      ,  KC_COLN    ,  KC_MINS     ,  KC_0        ,  KC_PIPE     ,                KC_AMPR   ,  KC_1      ,  KC_EQL    ,  KC_UNDS   ,  KC_PERC   ,
       KC_6        ,  KC_7       ,  KC_8        ,  KC_9        ,  KC_NO       ,                KC_TILD   ,  KC_2      ,  KC_3      ,  KC_4      ,  KC_5      ,
     //-----------------------------------------------------------------------|                |-------------------------------------------------------------.
-      KC_NO       ,  KC_NO      ,  KC_NO       ,  LSFT_T(KC_K),  KC_J        ,                KC_NO     ,  KC_NO     ,  KC_NO     ,  TO(1)     ,  KC_NO
+      KC_NO       ,  KC_NO      ,  KC_NO       ,  LSFT_T(KC_K),  KC_LCTL     ,                KC_NO     ,  KC_NO     ,  KC_NO     ,  TO(1)     ,  KC_NO
     //-----------------------------------------------------------------------'                '-------------------------------------------------------------'
   ),
 
@@ -44,11 +44,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [4] = LAYOUT(
     //-----------------------------------------------------------------------.                ,-------------------------------------------------------------.
-      KC_NO       ,  KC_LBRC    ,  KC_RBRC     ,  KC_LEFT     ,  KC_NO       ,                KC_NO     ,  KC_LEFT   ,  KC_RPRN   ,  KC_LPRN   ,  KC_NO     ,
-      KC_NO       ,  KC_LCBR    ,  KC_RCBR     ,  KC_LEFT     ,  KC_F11      ,                KC_F12    ,  KC_LEFT   ,  KC_GT     ,  KC_LT     ,  KC_ENT    ,
-      KC_F6       ,  KC_F7      ,  KC_F8       ,  KC_F9       ,  KC_F10      ,                KC_F1     ,  KC_F2     ,  KC_F3     ,  KC_F4     ,  KC_F5     ,
+      KC_F1       ,  KC_LBRC    ,  KC_RBRC     ,  KC_LEFT     ,  KC_F7       ,                KC_F9     ,  KC_LEFT   ,  KC_RPRN   ,  KC_LPRN   ,  KC_F4     ,
+      KC_F1       ,  KC_LCBR    ,  KC_RCBR     ,  KC_LEFT     ,  KC_F11      ,                KC_F12    ,  KC_LEFT   ,  KC_DQUO   ,  KC_DQUO   ,  KC_F5    ,
+      KC_F3       ,  KC_QUOT    ,  KC_QUOT     ,  KC_LEFT     ,  KC_F8       ,                KC_F10    ,  KC_LEFT   ,  KC_GT     ,  KC_LT     ,  KC_F6     ,
     //-----------------------------------------------------------------------|                |-------------------------------------------------------------.
-      KC_NO       ,  KC_NO      ,  KC_NO       ,  KC_NO       ,  KC_NO       ,                KC_F10    ,  KC_F1     ,  KC_NO     ,  TO(1)     ,  KC_NO
+      KC_NO       ,  KC_NO      ,  KC_NO       ,  KC_NO       ,  KC_NO       ,                KC_RCTL   ,  KC_F1     ,  KC_NO     ,  TO(1)     ,  KC_NO
     //-----------------------------------------------------------------------'                '-------------------------------------------------------------'
   ),
 
@@ -99,7 +99,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 void oled_render_layer_state(void) {
     oled_write_P(PSTR("\nFirmware zepmash\n"), false);
-    oled_write_P(PSTR("rev 11\n\n"), false);
+    oled_write_P(PSTR("rev 12_1\n\n"), false);
     oled_write_P(PSTR("Layer: "), false);
     switch (layer_state) {
         case 1:
