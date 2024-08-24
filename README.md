@@ -1,2 +1,6 @@
 # qmk_firmware
-QMK Firmware modified for my personal lily58pro-encoder project
+QMK Firmware files for my keyboards.
+
+Contains keymaps, user space code and an updated firmware for the KORA.
+
+...amongst other things.
