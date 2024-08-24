@@ -24,11 +24,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [2] = LAYOUT(
     //-----------------------------------------------------------------------.                ,-------------------------------------------------------------.
-     OSM(MOD_LGUI),OSM(MOD_LALT),OSM(MOD_LSFT) ,OSM(MOD_LCTL) ,  KC_NO       ,                KC_NO ,OSM(MOD_RCTL),OSM(MOD_RSFT),OSM(MOD_RALT),OSM(MOD_RGUI),
+     OSM(MOD_LGUI),OSM(MOD_LALT),OSM(MOD_LSFT) ,OSM(MOD_LCTL) ,  KC_K        ,                KC_NO ,OSM(MOD_RCTL),OSM(MOD_RSFT),OSM(MOD_RALT),OSM(MOD_RGUI),
       KC_GRV      ,  KC_COLN    ,  KC_MINS     ,  KC_0        ,  KC_PIPE     ,                KC_AMPR   ,  KC_1      ,  KC_EQL    ,  KC_UNDS   ,  KC_PERC   ,
       KC_6        ,  KC_7       ,  KC_8        ,  KC_9        ,  KC_NO       ,                KC_TILD   ,  KC_2      ,  KC_3      ,  KC_4      ,  KC_5      ,
     //-----------------------------------------------------------------------|                |-------------------------------------------------------------.
-      KC_NO       ,  KC_NO      ,  KC_NO       ,  LSFT_T(KC_K),LM(6, MOD_RCTL),               KC_NO     ,  KC_NO     ,  KC_NO     ,  TO(1)     ,  KC_NO
+      KC_NO       ,  KC_NO      ,  KC_NO       ,  LSFT_T(KC_J),LM(6, MOD_RCTL),               KC_NO     ,  KC_NO     ,  KC_NO     ,  TO(1)     ,  KC_NO
     //-----------------------------------------------------------------------'                '-------------------------------------------------------------'
   ),
 
