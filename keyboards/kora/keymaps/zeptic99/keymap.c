@@ -15,7 +15,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [1] = LAYOUT(
     //-----------------------------------------------------------------------.                ,-------------------------------------------------------------.
       KC_Q        ,  KC_W       ,  KC_F        ,  KC_P        ,  KC_G        ,                KC_J      ,  KC_L      ,  KC_U      ,  KC_Y      ,  KC_SCLN   ,
-      KC_A        ,  KC_R       ,  KC_S        ,  KC_T        ,  KC_D        ,                KC_H      ,  KC_N      <F8>,  KC_E      ,  KC_I      ,  KC_O      ,
+      KC_A        ,  KC_R       ,  KC_S        ,  KC_T        ,  KC_D        ,                KC_H      ,  KC_N      ,  KC_E      ,  KC_I      ,  KC_O      ,
       KC_X        ,  KC_SLSH    ,  KC_C        ,  KC_V        ,  KC_B        ,                KC_K      ,  KC_M      ,  KC_COMM   ,  KC_DOT    ,  KC_Q      ,
     //-----------------------------------------------------------------------|                |-------------------------------------------------------------.
       TO(5)       ,  KC_SPC     , OSM(MOD_LGUI),  KC_LSFT     ,  MO(4)       ,                MO(2)     ,  KC_SPC    ,  MO(3)     ,  MO(7)     ,  KC_NO
@@ -45,7 +45,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [4] = LAYOUT(
     //-----------------------------------------------------------------------.                ,-------------------------------------------------------------.
       KC_F1       ,  KC_LBRC    ,  KC_RBRC     ,  KC_LEFT     ,  KC_F7       ,                KC_F9     ,  KC_LEFT   ,  KC_RPRN   ,  KC_LPRN   ,  KC_F4     ,
-      KC_F1       ,  KC_LCBR    ,  KC_RCBR     ,  KC_LEFT     ,  KC_F11      ,                KC_F12    ,  KC_LEFT   ,  KC_DQUO   ,  KC_DQUO   ,  KC_F5    ,
+      KC_F1       ,  KC_LCBR    ,  KC_RCBR     ,  KC_LEFT     ,  KC_F11      ,                KC_F12    ,  KC_LEFT   ,  KC_DQUO   ,  KC_DQUO   ,  KC_F5     ,
       KC_F3       ,  KC_QUOT    ,  KC_QUOT     ,  KC_LEFT     ,  KC_F8       ,                KC_F10    ,  KC_LEFT   ,  KC_GT     ,  KC_LT     ,  KC_F6     ,
     //-----------------------------------------------------------------------|                |-------------------------------------------------------------.
       KC_NO       ,  KC_NO      ,  KC_NO       ,  KC_NO       ,  KC_NO       ,                KC_RCTL   ,  KC_F1     ,  KC_NO     ,  TO(1)     ,  KC_NO
