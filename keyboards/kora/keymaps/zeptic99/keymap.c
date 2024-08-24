@@ -99,7 +99,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 void oled_render_layer_state(void) {
     oled_write_P(PSTR("\nFirmware zepmash\n"), false);
-    oled_write_P(PSTR("rev 12_3\n\n"), false);
+    oled_write_P(PSTR("rev 12_4\n\n"), false);
     oled_write_P(PSTR("Layer: "), false);
     switch (layer_state) {
         case 1:
