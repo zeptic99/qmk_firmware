@@ -83,14 +83,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KC_A        ,  KC_S       ,  KC_D        ,  KC_F        ,  KC_G        ,                TO(0)     ,  TO(0)     ,  TO(0)     ,  TO(0)     ,  TO(0)     ,
       KC_Z        ,  KC_X       ,  KC_C        ,  KC_V        ,  KC_B        ,                TO(0)     ,  TO(0)     ,  TO(0)     ,  TO(0)     ,  TO(0)     ,
     //-----------------------------------------------------------------------|                |-------------------------------------------------------------.
-      TO(0)       ,  KC_DOWN    ,  MO(7)       ,  KC_SPC      ,  KC_DOWN     ,                MO(2)     ,  KC_SPC    ,  MO(3)     ,  MO(7)     ,  KC_NO
+      KC_TRNS     ,  KC_DOWN    ,  MO(7)       ,  KC_SPC      ,  KC_DOWN     ,                MO(2)     ,  KC_SPC    ,  MO(3)     ,  MO(7)     ,  KC_NO
     //-----------------------------------------------------------------------'                '-------------------------------------------------------------'
   ),
 
 
   [7] = LAYOUT(
     //-----------------------------------------------------------------------.                ,-------------------------------------------------------------.
-      KC_Y        ,  KC_U       ,  KC_I        ,  KC_O        ,  KC_P        ,                TO(0)     ,  TO(1)     ,  KC_NO     ,  KC_NO     ,  KC_NO     ,
+      KC_Y        ,  KC_U       ,  KC_I        ,  KC_O        ,  KC_P        ,                TO(0)     ,  TO(1)     ,  TO(6)     ,  KC_NO     ,  KC_NO     ,
       KC_H        ,  KC_J       ,  KC_K        ,  KC_L        ,  KC_F2       ,                DF(1)     ,  KC_NO     ,  KC_NO     ,  KC_NO     ,  KC_NO     ,
       KC_N        ,  KC_M       ,  KC_F1       ,  KC_F3       ,  KC_F4       ,                KC_NO     ,  KC_NO     ,  KC_NO     ,  KC_NO     ,  KC_NO     ,
     //-----------------------------------------------------------------------|                |-------------------------------------------------------------.
@@ -103,7 +103,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 void oled_render_layer_state(void) {
     oled_write_P(PSTR("\nFirmware zepmash\n"), false);
-    oled_write_P(PSTR("rev 13\n\n"), false);
+    oled_write_P(PSTR("rev 13_1\n\n"), false);
     oled_write_P(PSTR("Layer: "), false);
     switch (get_highest_layer(layer_state)) {
         case 0:
