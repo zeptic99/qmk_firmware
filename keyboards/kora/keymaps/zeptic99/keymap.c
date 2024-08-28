@@ -90,11 +90,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [7] = LAYOUT(
     //-----------------------------------------------------------------------.                ,-------------------------------------------------------------.
-      KC_Y        ,  KC_U       ,  KC_I        ,  KC_O        ,  KC_P        ,                TO(0)     ,  TO(1)     ,  TO(6)     ,  KC_NO     ,  KC_NO     ,
-      KC_H        ,  KC_J       ,  KC_K        ,  KC_L        ,  KC_F2       ,                DF(1)     ,  KC_NO     ,  KC_NO     ,  KC_NO     ,  KC_NO     ,
-      KC_N        ,  KC_M       ,  KC_F1       ,  KC_F3       ,  KC_F4       ,                KC_NO     ,  KC_NO     ,  KC_NO     ,  KC_NO     ,  KC_NO     ,
+      KC_ESC      ,  KC_Y        ,  KC_U       ,  KC_I        ,  KC_O        ,                TO(0)     ,  TO(1)     ,  TO(6)     ,  KC_NO     ,  KC_NO     ,
+      KC_TAB      ,  KC_H        ,  KC_J       ,  KC_K        ,  KC_L        ,                DF(1)     ,  KC_NO     ,  KC_NO     ,  KC_NO     ,  KC_NO     ,
+      KC_ENT      ,  KC_N        ,  KC_M       ,  KC_P        ,  KC_F1       ,                KC_NO     ,  KC_NO     ,  KC_NO     ,  KC_NO     ,  KC_NO     ,
     //-----------------------------------------------------------------------|                |-------------------------------------------------------------.
-      KC_NO       ,  KC_NO      ,  KC_TRNS     ,  KC_NO       ,  KC_NO       ,                KC_NO     ,  KC_NO     ,  KC_NO     ,  KC_TRNS   ,  KC_NO
+      KC_NO       ,  KC_NO      ,  KC_TRNS     ,  KC_F3       ,  KC_F2       ,                KC_NO     ,  KC_NO     ,  KC_NO     ,  KC_TRNS   ,  KC_NO
     //-----------------------------------------------------------------------'                '-------------------------------------------------------------'
   ),
 };
