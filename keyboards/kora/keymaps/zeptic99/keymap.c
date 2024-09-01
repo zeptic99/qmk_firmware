@@ -17,9 +17,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [0] = LAYOUT(
     //-----------------------------------------------------------------------.                ,-------------------------------------------------------------.
-      KC_Q        ,  KC_W       ,  KC_F        ,  KC_P        ,  KC_G        ,                KC_J      ,  KC_L      ,  KC_U      ,  KC_Y      ,  KC_SCLN   ,
-      KC_A        ,  KC_R       ,  KC_S        ,  KC_T        ,  KC_D        ,                KC_H      ,  KC_N      ,  KC_E      ,  KC_I      ,  KC_O      ,
-      KC_X        ,  KC_SLSH    ,  KC_C        ,  KC_V        ,  KC_B        ,                KC_K      ,  KC_M      ,  KC_COMM   ,  KC_DOT    ,  KC_QUOT   ,
+      KC_J        ,  KC_G       ,  KC_M        ,  KC_P        ,  KC_V        ,                KC_J      ,  KC_L      ,  KC_U      ,  KC_Y      ,  KC_SCLN   ,
+      KC_R        ,  KC_S       ,  KC_N        ,  KC_D        ,  KC_B        ,                KC_H      ,  KC_A      ,  KC_E      ,  KC_I      ,  KC_H      ,
+      KC_X        ,  KC_F       ,  KC_L        ,  KC_C        ,  KC_W        ,                KC_K      ,  KC_U      ,  KC_O      ,  KC_Y      ,  KC_K      ,
     //-----------------------------------------------------------------------|                |-------------------------------------------------------------.
       TO(6)       ,  KC_SPC     ,  KC_LGUI     ,  LSFT_T(KC_R),  MO(4)       ,                MO(2)     ,  KC_SPC    ,  MO(3)     ,  MO(7)     ,  KC_NO
     //-----------------------------------------------------------------------'                '-------------------------------------------------------------'
@@ -103,7 +103,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 void oled_render_layer_state(void) {
     oled_write_P(PSTR("\nFirmware zepmash\n"), false);
-    oled_write_P(PSTR("rev 13_1\n\n"), false);
+    oled_write_P(PSTR("rev 13_2\n\n"), false);
     oled_write_P(PSTR("Layer: "), false);
     switch (get_highest_layer(layer_state)) {
         case 0:
