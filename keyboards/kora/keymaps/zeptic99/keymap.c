@@ -48,7 +48,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //-----------------------------------------------------------------------.                ,-------------------------------------------------------------.
       QK_BOOT     ,  KC_NO      ,  KC_NO       ,  KC_NO       ,  KC_NO       ,                KC_NO     ,  KC_NO     ,  KC_NO     ,  KC_NO     ,  KC_NO     ,
       KC_NO       ,  KC_COLN    ,LCTL(KC_BSPC) ,  KC_TAB      ,  KC_DEL      ,                KC_LEFT   ,  KC_DOWN   ,  KC_UP     ,  KC_RGHT   ,  KC_ENT    ,
-      KC_NO       ,  KC_NUHS    ,  KC_Z        ,  RSFT(KC_Z)  ,  KC_NO       ,                KC_NO     ,  KC_NO     ,  KC_NO     ,  KC_NO     ,  KC_NO     ,
+      KC_NO       ,  KC_NUHS    ,  KC_Z        ,  RSFT(KC_Z)  ,  KC_NO       ,                KC_NO     ,  KC_BSPC   ,  KC_NO     ,  KC_NO     ,  KC_NO     ,
     //-----------------------------------------------------------------------|                |-------------------------------------------------------------.
       KC_NO       ,  KC_NO      ,  KC_NO       ,  KC_ESC      ,  KC_NO       ,                KC_NO     ,  KC_NO     ,  KC_TRNS   ,  TO(1)     ,  KC_NO
     //-----------------------------------------------------------------------'                '-------------------------------------------------------------'
@@ -60,7 +60,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KC_F1       ,  KC_LCBR    ,  KC_RCBR     ,  KC_LEFT     ,  KC_F11      ,                KC_F12    ,  KC_LEFT   ,  KC_DQUO   ,  KC_DQUO   ,  KC_F5     ,
       KC_F3       ,  KC_QUOT    ,  KC_QUOT     ,  KC_LEFT     ,  KC_F8       ,                KC_F10    ,  KC_LEFT   ,  KC_GT     ,  KC_LT     ,  KC_F6     ,
     //-----------------------------------------------------------------------|                |-------------------------------------------------------------.
-      KC_NO       ,  KC_NO      ,  KC_NO       ,  KC_NO       ,  KC_TRNS    ,                 LM(5, MOD_LCTL),MO(0)  ,  KC_NO     ,  TO(1)     ,  KC_NO
+      KC_NO       ,  KC_NO      ,  KC_NO       ,  KC_NO       ,  KC_TRNS    ,                 LM(5, MOD_LCTL),KC_SCLN,  KC_NO     ,  TO(1)     ,  KC_NO
     //-----------------------------------------------------------------------'                '-------------------------------------------------------------'
   ),
 
@@ -102,7 +102,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 void oled_render_layer_state(void) {
     oled_write_P(PSTR("\nFirmware zepmash\n"), false);
-    oled_write_P(PSTR("rev 14_1\n\n"), false);
+    oled_write_P(PSTR("rev 14_3\n\n"), false);
     oled_write_P(PSTR("Layer: "), false);
     switch (get_highest_layer(layer_state)) {
         case 0:
