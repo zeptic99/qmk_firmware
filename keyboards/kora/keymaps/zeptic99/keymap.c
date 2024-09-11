@@ -16,38 +16,38 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [0] = LAYOUT(
     //-----------------------------------------------------------------------.                ,-------------------------------------------------------------.
-      KC_J        ,  KC_G       ,  KC_M        ,  KC_P        ,  KC_V        ,                KC_J      ,  KC_L      ,  KC_U      ,  KC_Y      ,  KC_SCLN   ,
-      KC_R        ,  KC_S       ,  KC_N        ,  KC_D        ,  KC_B        ,                KC_H      ,  KC_A      ,  KC_E      ,  KC_I      ,  KC_H      ,
-      KC_X        ,  KC_F       ,  KC_L        ,  KC_C        ,  KC_W        ,                KC_K      ,  KC_U      ,  KC_O      ,  KC_Y      ,  KC_K      ,
+      KC_Q        ,  KC_W       ,  KC_F        ,  KC_P        ,  KC_G        ,                KC_J      ,  KC_L      ,  KC_U      ,  KC_Y      ,  KC_SCLN   ,
+      KC_A        ,  KC_R       ,  KC_S        ,  KC_T        ,  KC_D        ,                KC_H      ,  KC_N      ,  KC_E      ,  KC_I      ,  KC_O      ,
+      KC_X        ,  KC_SLSH    ,  KC_C        ,  KC_V        ,  KC_B        ,                KC_K      ,  KC_M      ,  KC_COMM   ,  KC_DOT    ,  KC_Q      ,
     //-----------------------------------------------------------------------|                |-------------------------------------------------------------.
-      TO(6)       ,  KC_SPC     ,  KC_LGUI     ,  LSFT_T(KC_T),  MO(4)       ,                MO(2)     ,  KC_SPC    ,  MO(3)     ,  MO(7)     ,  KC_NO
+      TO(6)       ,  KC_SPC     ,LM(7, MOD_LGUI), KC_LSFT     ,  MO(4)       ,                MO(2)     ,  KC_SPC    ,  MO(3)     ,  MO(6)     ,  KC_NO
     //-----------------------------------------------------------------------'                '-------------------------------------------------------------'
   ),
 
   [1] = LAYOUT(
     //-----------------------------------------------------------------------.                ,-------------------------------------------------------------.
-      KC_Q        ,  KC_W       ,  KC_F        ,  KC_P        ,  KC_G        ,                KC_J      ,  KC_L      ,  KC_U      ,  KC_Y      ,  KC_SCLN   ,
-      KC_A        ,  KC_R       ,  KC_S        ,  KC_T        ,  KC_D        ,                KC_H      ,  KC_N      ,  KC_E      ,  KC_I      ,  KC_O      ,
-      KC_X        ,  KC_SLSH    ,  KC_C        ,  KC_V        ,  KC_B        ,                KC_K      ,  KC_M      ,  KC_COMM   ,  KC_DOT    ,  KC_Q      ,
+      KC_J        ,  KC_G       ,  KC_M        ,  KC_P        ,  KC_V        ,                KC_J      ,  KC_L      ,  KC_U      ,  KC_Y      ,  KC_SCLN   ,
+      KC_R        ,  KC_S       ,  KC_N        ,  KC_D        ,  KC_B        ,                KC_H      ,  KC_A      ,  KC_E      ,  KC_I      ,  KC_H      ,
+      KC_X        ,  KC_F       ,  KC_L        ,  KC_C        ,  KC_W        ,                KC_K      ,  KC_U      ,  KC_O      ,  KC_Y      ,  KC_K      ,
     //-----------------------------------------------------------------------|                |-------------------------------------------------------------.
-      TO(6)       ,  KC_SPC     , OSM(MOD_LGUI),  KC_LSFT     ,  MO(4)       ,                MO(2)     ,  KC_SPC    ,  MO(3)     ,  MO(7)     ,  KC_NO
+      KC_TRNS     ,  KC_TRNS    ,LM(7, MOD_LGUI),  LSFT_T(KC_T),  MO(4)       ,                MO(2)     ,  KC_TRNS   ,  MO(3)     ,  KC_TRNS   ,  KC_TRNS
     //-----------------------------------------------------------------------'                '-------------------------------------------------------------'
   ),
 
   [2] = LAYOUT(
     //-----------------------------------------------------------------------.                ,-------------------------------------------------------------.
-     OSM(MOD_LGUI),OSM(MOD_LALT),OSM(MOD_LSFT) ,OSM(MOD_LCTL) ,  KC_K        ,                KC_NO ,OSM(MOD_RCTL),OSM(MOD_RSFT),OSM(MOD_RALT),OSM(MOD_RGUI),
-      KC_GRV      ,  KC_COLN    ,  KC_MINS     ,  KC_0        ,  KC_PIPE     ,                KC_AMPR   ,  KC_1      ,  KC_EQL    ,  KC_UNDS   ,  KC_PERC   ,
+     OSM(MOD_LGUI),OSM(MOD_LALT),OSM(MOD_LSFT) ,OSM(MOD_LCTL) ,  KC_K        ,               KC_CIRC,OSM(MOD_RCTL),OSM(MOD_RSFT),OSM(MOD_RALT),OSM(MOD_RGUI),
+      KC_TILD     ,  KC_DLR     ,  KC_HASH     ,  KC_0        ,  KC_PIPE     ,                KC_AMPR   ,  KC_1      ,  KC_EQL    ,  KC_MINS   ,  KC_PERC   ,
       KC_6        ,  KC_7       ,  KC_8        ,  KC_9        ,  KC_NO       ,                KC_TILD   ,  KC_2      ,  KC_3      ,  KC_4      ,  KC_5      ,
     //-----------------------------------------------------------------------|                |-------------------------------------------------------------.
-      KC_NO       ,  KC_NO      ,  KC_NO       , LSFT_T(KC_J),LM(5, MOD_LCTL),                KC_TRNS   ,  KC_NO     ,  KC_NO     ,  TO(1)     ,  KC_NO
+      KC_NO       ,  KC_NO      ,  KC_NO       , LSFT_T(KC_K),   KC_J        ,                KC_TRNS   ,  KC_NO     ,  KC_NO     ,  TO(1)     ,  KC_NO
     //-----------------------------------------------------------------------'                '-------------------------------------------------------------'
   ),
 
   [3] = LAYOUT(
     //-----------------------------------------------------------------------.                ,-------------------------------------------------------------.
-      QK_BOOT     ,  KC_NO      ,  KC_NO       ,  KC_NO       ,  KC_NO       ,                KC_NO     ,  KC_NO     ,  KC_NO     ,  KC_NO     ,  KC_NO     ,
-      KC_NO       ,  KC_COLN    ,LCTL(KC_BSPC) ,  KC_TAB      ,  KC_DEL      ,                KC_LEFT   ,  KC_DOWN   ,  KC_UP     ,  KC_RGHT   ,  KC_ENT    ,
+      QK_BOOT     ,  KC_NO      ,  KC_NO       ,  KC_NO       ,  KC_NO       ,                KC_NO     ,  KC_CIRC   ,  KC_NO     ,  KC_NO     ,  KC_NO     ,
+      KC_GRV      ,  KC_COLN    ,LCTL(KC_BSPC) ,  KC_TAB      ,  KC_DEL      ,                KC_LEFT   ,  KC_DOWN   ,  KC_UP     ,  KC_RGHT   ,  KC_ENT    ,
       KC_NO       ,  KC_NUHS    ,  KC_Z        ,  RSFT(KC_Z)  ,  KC_NO       ,                KC_NO     ,  KC_BSPC   ,  KC_NO     ,  KC_NO     ,  KC_NO     ,
     //-----------------------------------------------------------------------|                |-------------------------------------------------------------.
       KC_NO       ,  KC_NO      ,  KC_NO       ,  KC_ESC      ,  KC_NO       ,                KC_NO     ,  KC_NO     ,  KC_TRNS   ,  TO(1)     ,  KC_NO
@@ -57,43 +57,43 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [4] = LAYOUT(
     //-----------------------------------------------------------------------.                ,-------------------------------------------------------------.
       KC_F1       ,  KC_LBRC    ,  KC_RBRC     ,  KC_LEFT     ,  KC_F7       ,                KC_F9     ,  KC_LEFT   ,  KC_RPRN   ,  KC_LPRN   ,  KC_F4     ,
-      KC_F1       ,  KC_LCBR    ,  KC_RCBR     ,  KC_LEFT     ,  KC_F11      ,                KC_F12    ,  KC_LEFT   ,  KC_DQUO   ,  KC_DQUO   ,  KC_F5     ,
+      KC_F2       ,  KC_LCBR    ,  KC_RCBR     ,  KC_LEFT     ,  KC_F11      ,                KC_F12    ,  KC_LEFT   ,  KC_DQUO   ,  KC_DQUO   ,  KC_F5     ,
       KC_F3       ,  KC_QUOT    ,  KC_QUOT     ,  KC_LEFT     ,  KC_F8       ,                KC_F10    ,  KC_LEFT   ,  KC_GT     ,  KC_LT     ,  KC_F6     ,
     //-----------------------------------------------------------------------|                |-------------------------------------------------------------.
-      KC_NO       ,  KC_NO      ,  KC_NO       ,  KC_NO       ,  KC_TRNS    ,                 LM(5, MOD_LCTL),KC_SCLN,  KC_NO     ,  TO(1)     ,  KC_NO
+      KC_NO       ,  KC_NO      ,  KC_NO       ,  KC_NO       ,  KC_TRNS    ,                 KC_COLN   ,  KC_SCLN   ,  KC_NO     ,  TO(1)     ,  KC_NO
     //-----------------------------------------------------------------------'                '-------------------------------------------------------------'
   ),
 
 
   [5] = LAYOUT(
     //-----------------------------------------------------------------------.                ,-------------------------------------------------------------.
-      KC_Q        ,  KC_W       ,  KC_F        ,  KC_P        ,  KC_G        ,                KC_J      ,  KC_L      ,  KC_U      ,  KC_Y      ,  KC_SCLN   ,
-      KC_A        ,  KC_R       ,  KC_S        ,  KC_T        ,  KC_D        ,                KC_H      ,  KC_N      ,  KC_E      ,  KC_I      ,  KC_O      ,
-      KC_X        ,  KC_SLSH    ,  KC_C        ,  KC_V        ,  KC_B        ,                KC_K      ,  KC_M      ,  KC_COMM   ,  KC_DOT    ,  KC_Q      ,
+      KC_Q        ,  KC_W       ,  KC_E        ,  KC_R        ,  KC_T        ,                TO(0)     ,  TO(0)     ,  TO(0)     ,  TO(0)     ,  TO(0)     ,
+      KC_A        ,  KC_S       ,  KC_D        ,  KC_F        ,  KC_G        ,                TO(0)     ,  TO(0)     ,  TO(0)     ,  TO(0)     ,  TO(0)     ,
+      KC_Z        ,  KC_X       ,  KC_C        ,  KC_V        ,  KC_B        ,                TO(0)     ,  TO(0)     ,  TO(0)     ,  TO(0)     ,  TO(0)     ,
     //-----------------------------------------------------------------------|                |-------------------------------------------------------------.
-      TO(5)       ,  KC_SPC     , OSM(MOD_LGUI),  KC_LSFT     ,  MO(4)       ,                MO(2)     ,  KC_SPC    ,  MO(3)     ,  MO(7)     ,  KC_NO
+      KC_TRNS   ,LM(7, MOD_LGUI),  MO(6)       ,  KC_SPC      ,  KC_LCTL     ,                MO(2)     ,  KC_SPC    ,  MO(3)     ,  MO(6)     ,  KC_NO
     //-----------------------------------------------------------------------'                '-------------------------------------------------------------'
   ),
 
 
   [6] = LAYOUT(
     //-----------------------------------------------------------------------.                ,-------------------------------------------------------------.
-      KC_Q        ,  KC_W       ,  KC_E        ,  KC_R        ,  KC_T        ,                TO(0)     ,  TO(0)     ,  TO(0)     ,  TO(0)     ,  TO(0)     ,
-      KC_A        ,  KC_S       ,  KC_D        ,  KC_F        ,  KC_G        ,                TO(0)     ,  TO(0)     ,  TO(0)     ,  TO(0)     ,  TO(0)     ,
-      KC_Z        ,  KC_X       ,  KC_C        ,  KC_V        ,  KC_B        ,                TO(0)     ,  TO(0)     ,  TO(0)     ,  TO(0)     ,  TO(0)     ,
+      KC_ESC      ,  KC_Y        ,  KC_U       ,  KC_I        ,  KC_O        ,                TO(0)     ,  TO(1)     ,  TO(5)     ,  KC_NO     ,  KC_NO     ,
+      KC_TAB      ,  KC_H        ,  KC_J       ,  KC_K        ,  KC_L        ,                DF(0)     ,  DF(1)     ,  DF(7)     ,  KC_NO     ,  KC_NO     ,
+      KC_ENT      ,  KC_N        ,  KC_M       ,  KC_P        ,  KC_F1       ,                KC_NO     ,  KC_NO     ,  KC_NO     ,  KC_NO     ,  KC_NO     ,
     //-----------------------------------------------------------------------|                |-------------------------------------------------------------.
-      KC_TRNS     ,  KC_DOWN    ,  MO(7)       ,  KC_SPC      ,  KC_DOWN     ,                MO(2)     ,  KC_SPC    ,  MO(3)     ,  MO(7)     ,  KC_NO
+      KC_NO       ,  KC_NO      ,  KC_TRNS     ,  KC_F3       ,  KC_F2       ,                KC_NO     ,  KC_NO     ,  KC_NO     ,  KC_TRNS   ,  KC_NO
     //-----------------------------------------------------------------------'                '-------------------------------------------------------------'
   ),
 
 
   [7] = LAYOUT(
     //-----------------------------------------------------------------------.                ,-------------------------------------------------------------.
-      KC_ESC      ,  KC_Y        ,  KC_U       ,  KC_I        ,  KC_O        ,                TO(0)     ,  TO(1)     ,  TO(6)     ,  KC_NO     ,  KC_NO     ,
-      KC_TAB      ,  KC_H        ,  KC_J       ,  KC_K        ,  KC_L        ,                DF(1)     ,  KC_NO     ,  KC_NO     ,  KC_NO     ,  KC_NO     ,
-      KC_ENT      ,  KC_N        ,  KC_M       ,  KC_P        ,  KC_F1       ,                KC_NO     ,  KC_NO     ,  KC_NO     ,  KC_NO     ,  KC_NO     ,
+      KC_Q        ,  KC_W       ,  KC_E        ,  KC_R        ,  KC_T        ,                KC_Y      ,  KC_U      ,  KC_I      ,  KC_O      ,  KC_P      ,
+      KC_A        ,  KC_S       ,  KC_D        ,  KC_F        ,  KC_G        ,                KC_H      ,  KC_J      ,  KC_K      ,  KC_L      ,  KC_SCLN   ,
+      KC_Z        ,  KC_X       ,  KC_C        ,  KC_V        ,  KC_B        ,                KC_N      ,  KC_M      ,  KC_COMM   ,  KC_DOT    ,  KC_SLSH   ,
     //-----------------------------------------------------------------------|                |-------------------------------------------------------------.
-      KC_NO       ,  KC_NO      ,  KC_TRNS     ,  KC_F3       ,  KC_F2       ,                KC_NO     ,  KC_NO     ,  KC_NO     ,  KC_TRNS   ,  KC_NO
+      TO(6)       ,  KC_SPC     ,  KC_TRNS     ,  KC_LSFT     ,  MO(4)       ,                MO(2)     ,  KC_SPC    ,  MO(3)     ,  MO(6)     ,  KC_NO
     //-----------------------------------------------------------------------'                '-------------------------------------------------------------'
   ),
 };
@@ -102,14 +102,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 void oled_render_layer_state(void) {
     oled_write_P(PSTR("\nFirmware zepmash\n"), false);
-    oled_write_P(PSTR("rev 14_3\n\n"), false);
+    oled_write_P(PSTR("rev 15\n\n"), false);
     oled_write_P(PSTR("Layer: "), false);
-    switch (get_highest_layer(layer_state)) {
+    switch (get_highest_layer(layer_state|default_layer_state)) {
         case 0:
-            oled_write_ln_P(PSTR("Hands Down GOLD"), false);
+            oled_write_ln_P(PSTR("Colemak"), false);
             break;
         case 1:
-            oled_write_ln_P(PSTR("Colemak"), false);
+            oled_write_ln_P(PSTR("Hands Down AU"), false);
             break;
         case 2:
             oled_write_ln_P(PSTR("NumberNumber"), false);
@@ -121,16 +121,16 @@ void oled_render_layer_state(void) {
             oled_write_ln_P(PSTR("ARCANE"), false);
             break;
         case 5:
-            oled_write_ln_P(PSTR("CTRLCOLEMAK"), false);
+            oled_write_ln_P(PSTR("GAMING"), false);
             break;
         case 6:
-            oled_write_ln_P(PSTR("GAMING"), false);
+            oled_write_ln_P(PSTR("ADJUST"), false);
             break;
         case 7:
 /*        case L_FUNC|L_NUM:
         case L_FUNC|L_SYM:
         case L_FUNC|L_NUM|L_SYM:*/
-            oled_write_ln_P(PSTR("ADJUST"), false);
+            oled_write_ln_P(PSTR("QWERTY"), false);
             break;
     }
 }

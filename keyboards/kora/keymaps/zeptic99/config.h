@@ -25,6 +25,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MASTER_LEFT
 // #define MASTER_RIGHT
 #define TAPPING_TOGGLE 2
+#define ONESHOT_TAP_TOGGLE 2
 #define SPLIT_USB_DETECT
 
 //#define TAPPING_TERM 100
@@ -51,16 +52,3 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define OLED_FONT_H "keyboards/crkbd/lib/glcdfont.c"
 
 #define PERMISSIVE_HOLD
-
-
-// Mouse key speed and acceleration.
-#undef MOUSEKEY_DELAY
-#define MOUSEKEY_DELAY          0
-#undef MOUSEKEY_INTERVAL
-#define MOUSEKEY_INTERVAL       16
-#undef MOUSEKEY_WHEEL_DELAY
-#define MOUSEKEY_WHEEL_DELAY    0
-#undef MOUSEKEY_MAX_SPEED
-#define MOUSEKEY_MAX_SPEED      6
-#undef MOUSEKEY_TIME_TO_MAX
-#define MOUSEKEY_TIME_TO_MAX    64
