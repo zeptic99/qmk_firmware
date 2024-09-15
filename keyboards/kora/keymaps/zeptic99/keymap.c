@@ -1,7 +1,22 @@
 #include QMK_KEYBOARD_H
-
+/*                                 _
+ _______ _ __  _ __ ___   __ _ ___| |__
+|_  / _ \ '_ \| '_ ` _ \ / _` / __| '_ \
+ / /  __/ |_) | | | | | | (_| \__ \ | | |
+/___\___| .__/|_| |_| |_|\__,_|___/_| |_|
+        |_|
+ _              _                         _   _                         _
+| | _____ _   _| |__   ___   __ _ _ __ __| | | | __ _ _   _  ___  _   _| |_
+| |/ / _ \ | | | '_ \ / _ \ / _` | '__/ _` | | |/ _` | | | |/ _ \| | | | __|
+|   <  __/ |_| | |_) | (_) | (_| | | | (_| | | | (_| | |_| | (_) | |_| | |_
+|_|\_\___|\__, |_.__/ \___/ \__,_|_|  \__,_| |_|\__,_|\__, |\___/ \__,_|\__|
+          |___/                                       |___/
+*
+* zeptic 2023
+*/
 enum layer_number {
-
+/* Ignore the names of the layers here, they are not updated.
+ * refer to the layer state reader function.*/
     _HDGOLD = 0,
     _COLEMAK = 1,
     _NUMBERNUMBER = 2,
@@ -20,7 +35,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KC_A        ,  KC_R       ,  KC_S        ,  KC_T        ,  KC_D        ,                KC_H      ,  KC_N      ,  KC_E      ,  KC_I      ,  KC_O      ,
       KC_X        ,  KC_SLSH    ,  KC_C        ,  KC_V        ,  KC_B        ,                KC_K      ,  KC_M      ,  KC_COMM   ,  KC_DOT    ,  KC_Q      ,
     //-----------------------------------------------------------------------|                |-------------------------------------------------------------.
-      TO(6)       ,  KC_SPC     ,LM(7, MOD_LGUI), KC_LSFT     ,  MO(4)       ,                MO(2)     ,  KC_SPC    ,  MO(3)     ,  MO(6)     ,  KC_NO
+      KC_NO       ,  KC_SPC     ,LM(7, MOD_LGUI), KC_LSFT     , LT(4,KC_PAST),                LT(2, KC_EQL),KC_SPC   ,  MO(3)     ,  MO(6)     ,  KC_NO
     //-----------------------------------------------------------------------'                '-------------------------------------------------------------'
   ),
 
@@ -30,14 +45,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KC_R        ,  KC_S       ,  KC_N        ,  KC_D        ,  KC_B        ,                KC_H      ,  KC_A      ,  KC_E      ,  KC_I      ,  KC_H      ,
       KC_X        ,  KC_F       ,  KC_L        ,  KC_C        ,  KC_W        ,                KC_K      ,  KC_U      ,  KC_O      ,  KC_Y      ,  KC_K      ,
     //-----------------------------------------------------------------------|                |-------------------------------------------------------------.
-      KC_TRNS     ,  KC_TRNS    ,LM(7, MOD_LGUI),  LSFT_T(KC_T),  MO(4)       ,                MO(2)     ,  KC_TRNS   ,  MO(3)     ,  KC_TRNS   ,  KC_TRNS
+      KC_TRNS     ,  KC_TRNS    ,LM(7, MOD_LGUI),  LSFT_T(KC_T), MO(4)       ,                MO(2)     ,  KC_TRNS   ,  MO(3)     ,  KC_TRNS   ,  KC_TRNS
     //-----------------------------------------------------------------------'                '-------------------------------------------------------------'
   ),
 
   [2] = LAYOUT(
     //-----------------------------------------------------------------------.                ,-------------------------------------------------------------.
      OSM(MOD_LGUI),OSM(MOD_LALT),OSM(MOD_LSFT) ,OSM(MOD_LCTL) ,  KC_K        ,               KC_CIRC,OSM(MOD_RCTL),OSM(MOD_RSFT),OSM(MOD_RALT),OSM(MOD_RGUI),
-      KC_TILD     ,  KC_DLR     ,  KC_HASH     ,  KC_0        ,  KC_PIPE     ,                KC_AMPR   ,  KC_1      ,  KC_EQL    ,  KC_MINS   ,  KC_PERC   ,
+      KC_TILD     ,  KC_DLR     ,  KC_HASH     ,  KC_0        ,  KC_PIPE     ,                KC_AMPR   ,  KC_1      ,  KC_PLUS   ,  KC_UNDS   ,  KC_PERC   ,
       KC_6        ,  KC_7       ,  KC_8        ,  KC_9        ,  KC_NO       ,                KC_TILD   ,  KC_2      ,  KC_3      ,  KC_4      ,  KC_5      ,
     //-----------------------------------------------------------------------|                |-------------------------------------------------------------.
       KC_NO       ,  KC_NO      ,  KC_NO       , LSFT_T(KC_K),   KC_J        ,                KC_TRNS   ,  KC_NO     ,  KC_NO     ,  TO(1)     ,  KC_NO
@@ -46,7 +61,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [3] = LAYOUT(
     //-----------------------------------------------------------------------.                ,-------------------------------------------------------------.
-      QK_BOOT     ,  KC_NO      ,  KC_NO       ,  KC_NO       ,  KC_NO       ,                KC_NO     ,  KC_CIRC   ,  KC_NO     ,  KC_NO     ,  KC_NO     ,
+      QK_BOOT     ,  KC_NO      ,LCTL(KC_MINS) ,  LCTL(KC_EQL),  KC_NO       ,                KC_NO     ,  KC_CIRC   ,LCTL(KC_SCRL), KC_NO     ,  KC_NO     ,
       KC_GRV      ,  KC_COLN    ,LCTL(KC_BSPC) ,  KC_TAB      ,  KC_DEL      ,                KC_LEFT   ,  KC_DOWN   ,  KC_UP     ,  KC_RGHT   ,  KC_ENT    ,
       KC_NO       ,  KC_NUHS    ,  KC_Z        ,  RSFT(KC_Z)  ,  KC_NO       ,                KC_NO     ,  KC_BSPC   ,  KC_NO     ,  KC_NO     ,  KC_NO     ,
     //-----------------------------------------------------------------------|                |-------------------------------------------------------------.
@@ -102,7 +117,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 void oled_render_layer_state(void) {
     oled_write_P(PSTR("\nFirmware zepmash\n"), false);
-    oled_write_P(PSTR("rev 15\n\n"), false);
+    oled_write_P(PSTR("rev 15_2\n\n"), false);
     oled_write_P(PSTR("Layer: "), false);
     switch (get_highest_layer(layer_state|default_layer_state)) {
         case 0:
