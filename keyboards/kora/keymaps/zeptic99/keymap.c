@@ -35,7 +35,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KC_A        ,  KC_R       ,  KC_S        ,  KC_T        ,  KC_D        ,                KC_H      ,  KC_N      ,  KC_E      ,  KC_I      ,  KC_O      ,
       KC_X        ,  KC_SLSH    ,  KC_C        ,  KC_V        ,  KC_B        ,                KC_K      ,  KC_M      ,  KC_COMM   ,  KC_DOT    ,  KC_Q      ,
     //-----------------------------------------------------------------------|                |-------------------------------------------------------------.
-      KC_NO       ,  KC_SPC     ,LM(7, MOD_LGUI), KC_LSFT     , LT(4,KC_PAST),                LT(2, KC_EQL),KC_SPC   ,  MO(3)     ,  MO(6)     ,  KC_NO
+      KC_NO       ,  KC_SPC     ,LM(7, MOD_LGUI), KC_LSFT     , LT(2,KC_PAST),                LT(4, KC_EQL),KC_SPC   ,  MO(3)     ,  MO(6)     ,  KC_NO
     //-----------------------------------------------------------------------'                '-------------------------------------------------------------'
   ),
 
@@ -52,10 +52,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [2] = LAYOUT(
     //-----------------------------------------------------------------------.                ,-------------------------------------------------------------.
      OSM(MOD_LGUI),OSM(MOD_LALT),OSM(MOD_LSFT) ,OSM(MOD_LCTL) ,  KC_K        ,               KC_CIRC,OSM(MOD_RCTL),OSM(MOD_RSFT),OSM(MOD_RALT),OSM(MOD_RGUI),
-      KC_TILD     ,  KC_DLR     ,  KC_HASH     ,  KC_0        ,  KC_PIPE     ,                KC_AMPR   ,  KC_1      ,  KC_PLUS   ,  KC_UNDS   ,  KC_PERC   ,
+      KC_TILD     ,  KC_DLR     ,  KC_HASH     ,  KC_0        ,  KC_AMPR     ,                KC_PIPE   ,  KC_1      ,  KC_PLUS   ,  KC_UNDS   ,  KC_PERC   ,
       KC_6        ,  KC_7       ,  KC_8        ,  KC_9        ,  KC_NO       ,                KC_TILD   ,  KC_2      ,  KC_3      ,  KC_4      ,  KC_5      ,
     //-----------------------------------------------------------------------|                |-------------------------------------------------------------.
-      KC_NO       ,  KC_NO      ,  KC_NO       , LSFT_T(KC_K),   KC_J        ,                KC_TRNS   ,  KC_NO     ,  KC_NO     ,  TO(1)     ,  KC_NO
+      KC_NO       ,  KC_NO      ,  KC_NO       , LSFT_T(KC_K),   KC_J        ,                KC_EXLM   ,  KC_AT     ,  KC_NO     ,  TO(1)     ,  KC_NO
     //-----------------------------------------------------------------------'                '-------------------------------------------------------------'
   ),
 
@@ -117,7 +117,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 void oled_render_layer_state(void) {
     oled_write_P(PSTR("\nFirmware zepmash\n"), false);
-    oled_write_P(PSTR("rev 15_2\n\n"), false);
+    oled_write_P(PSTR("rev 15_3\n\n"), false);
     oled_write_P(PSTR("Layer: "), false);
     switch (get_highest_layer(layer_state|default_layer_state)) {
         case 0:
