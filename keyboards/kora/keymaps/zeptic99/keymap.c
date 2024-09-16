@@ -35,7 +35,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KC_A        ,  KC_R       ,  KC_S        ,  KC_T        ,  KC_D        ,                KC_H      ,  KC_N      ,  KC_E      ,  KC_I      ,  KC_O      ,
       KC_X        ,  KC_SLSH    ,  KC_C        ,  KC_V        ,  KC_B        ,                KC_K      ,  KC_M      ,  KC_COMM   ,  KC_DOT    ,  KC_Q      ,
     //-----------------------------------------------------------------------|                |-------------------------------------------------------------.
-      KC_NO       ,  KC_SPC     ,LM(7, MOD_LGUI), KC_LSFT     , LT(2,KC_PAST),                LT(4, KC_EQL),KC_SPC   ,  MO(3)     ,  MO(6)     ,  KC_NO
+      KC_NO       ,  KC_SPC     ,LM(7, MOD_LGUI), KC_LSFT     , LT(2,KC_EQL) ,                LT(4, KC_PAST),KC_SPC  ,  MO(3)     ,  MO(6)     ,  KC_NO
     //-----------------------------------------------------------------------'                '-------------------------------------------------------------'
   ),
 
@@ -117,7 +117,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 void oled_render_layer_state(void) {
     oled_write_P(PSTR("\nFirmware zepmash\n"), false);
-    oled_write_P(PSTR("rev 16_rc1-1\n\n"), false);
+    oled_write_P(PSTR("rev 16_rc2\n\n"), false);
     oled_write_P(PSTR("Layer: "), false);
     switch (get_highest_layer(layer_state|default_layer_state)) {
         case 0:
